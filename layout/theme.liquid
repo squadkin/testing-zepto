@@ -266,8 +266,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  
+
+  <div id="loox-head">
 	{{ shop.metafields.loox["global_html_head"] }}
+  </div>
 </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -336,7 +338,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  
+  <div id="loox-body">
 	{{ shop.metafields.loox["global_html_body"] }}
+  </div>
 </body>
 </html>
